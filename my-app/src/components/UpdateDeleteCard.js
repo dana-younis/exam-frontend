@@ -5,11 +5,11 @@ class updateDeleteCard extends Component {
     return (
       <>
         <Card style={{ width: '18rem' }}  key={this.props.idx}>
-          <Card.Img variant="top" src={this.props.Digimon.img} />
+          <Card.Img variant="top" src={this.props.digomon.img} />
           <Card.Body>
-            <Card.Title>{this.props.Digimon.name}</Card.Title>
+            <Card.Title>{this.props.digomon.name}</Card.Title>
             <Card.Text>
-            {this.props.Digimon.level}
+            {this.props.digomon.level}
             </Card.Text>
             <Button variant="primary" onClick={()=>this.props.deleteDigimon(this.props.index)}>Delete</Button>
             <Button variant="primary" onClick={()=>this.props.updateDigimon(this.props.index)}>Update</Button>

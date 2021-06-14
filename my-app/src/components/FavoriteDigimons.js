@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import axios from 'axios';
 import UpdateDeleteCard from './UpdateDeleteCard';
 import Form from './Form';
-import { isDeleteExpression } from 'typescript';
+
  class FavoriteDigimons extends Component {
     constructor(props){
         super(props);
@@ -80,7 +80,8 @@ updateFunc={this.updateFunc}
 
                />}
                {this.state.showDigimons&&this.state.Digimons.map((digomon,idx)=>{
-                   return(<UpdateDeleteCard
+                   return(
+                   <UpdateDeleteCard
                    index={idx}
                    digomon={digomon}
                    deleteDigimon={this.deleteDigimonFunc}
