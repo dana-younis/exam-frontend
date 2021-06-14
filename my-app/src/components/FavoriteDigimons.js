@@ -26,7 +26,7 @@ import Form from './Form';
        })
     }
     deleteDigimonFunc=async(index)=>{
-        const id=this.state.Digimons[index].id
+        const id=this.state.Digimons[index]._id
         const Digimons=await axios.delete(`${this.state.serverLink}/deleteDigimon/${id}`);
         this.setState({
             Digimons:Digimons.data
@@ -50,7 +50,7 @@ import Form from './Form';
 
     updateFunc=async(e)=>{
         e.preventDefault();
-        const id=this.state.Digimons[this.state.index].id;
+        const id=this.state.Digimons[this.state.index]._id;
 const digimonData={
     newName:this.state.newName,
     newLevel:this.state.newLevel,
